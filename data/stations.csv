@@ -1,0 +1,11 @@
+sensor_id,latitude,longitude,name,source
+DWLR_001,11.13856,78.53492,Synthetic station 1,synthetic
+DWLR_002,11.14339,78.3736,Synthetic station 2,synthetic
+DWLR_003,10.8703,78.71701,Synthetic station 3,synthetic
+DWLR_004,11.95518,78.65769,Synthetic station 4,synthetic
+DWLR_005,11.96072,78.93599,Synthetic station 5,synthetic
+DWLR_006,10.76198,78.35949,Synthetic station 6,synthetic
+DWLR_007,11.32921,78.61054,Synthetic station 7,synthetic
+DWLR_008,11.49082,78.37206,Synthetic station 8,synthetic
+DWLR_009,11.00961,79.23557,Synthetic station 9,synthetic
+DWLR_010,10.94245,79.2195,Synthetic station 10,synthetic

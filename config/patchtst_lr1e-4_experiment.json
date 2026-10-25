@@ -1,0 +1,36 @@
+{
+  "_comment": "LEARNING-RATE EXPERIMENT ONLY. Identical to config/patchtst_config.json except training.lr = 0.0001 (default 0.001). Run with --epochs 10 and --run-dir so nothing existing is overwritten. Do not pick settings from test metrics.",
+  "horizons": [7],
+  "model": {
+    "context_length": 96,
+    "patch_len": 16,
+    "stride": 8,
+    "d_model": 64,
+    "n_heads": 4,
+    "n_layers": 3,
+    "d_ff": 128,
+    "dropout": 0.2,
+    "head_dropout": 0.1,
+    "revin": true,
+    "use_covariates": true
+  },
+  "training": {
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "eval_batch_size": 512,
+    "max_epochs": 60,
+    "patience": 8,
+    "min_delta": 1e-6,
+    "grad_clip": 1.0,
+    "amp": "auto",
+    "num_workers": 0,
+    "seed": 42
+  },
+  "inference": {
+    "strict_inference_inputs": true
+  },
+  "rolling_origin": {
+    "max_epochs": 40
+  }
+}

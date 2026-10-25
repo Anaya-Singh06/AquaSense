@@ -1,0 +1,36 @@
+{
+  "_comment": "Fixed PatchTST settings (no hyper-parameter search; nothing here is tuned on test data). Edit values here or pass --patchtst-config <file> to scripts/train_patchtst.py. 'horizons' = forecast lengths in days (7 is the priority and mirrors the LSTM; 30 / 90 reuse the same network with a longer head). context_length = days of history fed to the model; patches of patch_len days are taken every 'stride' days. NOTE: every input AND target day of a training/evaluation window must be a real (non-interpolated) observation, so a longer context_length leaves fewer usable windows.",
+  "horizons": [7],
+  "model": {
+    "context_length": 96,
+    "patch_len": 16,
+    "stride": 8,
+    "d_model": 64,
+    "n_heads": 4,
+    "n_layers": 3,
+    "d_ff": 128,
+    "dropout": 0.2,
+    "head_dropout": 0.1,
+    "revin": true,
+    "use_covariates": true
+  },
+  "training": {
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "eval_batch_size": 512,
+    "max_epochs": 60,
+    "patience": 8,
+    "min_delta": 1e-6,
+    "grad_clip": 1.0,
+    "amp": "auto",
+    "num_workers": 0,
+    "seed": 42
+  },
+  "inference": {
+    "strict_inference_inputs": true
+  },
+  "rolling_origin": {
+    "max_epochs": 40
+  }
+}

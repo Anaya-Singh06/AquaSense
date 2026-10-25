@@ -1,0 +1,127 @@
+============================================================
+AQUASENSE — CURRENT MODEL EVALUATION
+============================================================
+
+ROLLING-ORIGIN EVALUATION
+5 folds | Real USGS groundwater + NASA POWER environmental data
+Period: 2010-01-01 to 2026-09-24
+Scoring: Day-horizon endpoint | Persistence baseline
+Note: Station counts vary by horizon and model comparison.
+
+------------------------------------------------------------
+PATCHTST — 7 DAY
+------------------------------------------------------------
+
+Pooled RMSE
+Model:       0.334 m
+Persistence: 0.400 m
+
+Model MAE
+Model:       0.158 m
+Persistence: 0.181 m
+
+Mean station NSE
+Model:       0.840
+Persistence: 0.819
+
+Median station NSE
+Model:       0.948
+Persistence: 0.936
+
+RMSE skill vs persistence: 16.4%
+RMSE wins: 41 / 57 stations
+Folds better than persistence: 5 / 5
+
+
+------------------------------------------------------------
+XGBOOST — 30 DAY
+------------------------------------------------------------
+
+Pooled RMSE
+Model:       0.828 m
+Persistence: 0.931 m
+
+Model MAE
+Model:       0.413 m
+Persistence: 0.458 m
+
+Mean station NSE
+Model:       0.156
+Persistence: 0.474
+
+Median station NSE
+Model:       0.682
+Persistence: 0.639
+
+RMSE skill vs persistence: 11.1%
+RMSE wins: 36 / 57 stations
+Folds better than persistence: 5 / 5
+
+
+------------------------------------------------------------
+LIGHTGBM — 90 DAY
+------------------------------------------------------------
+
+Pooled RMSE
+Model:       1.405 m
+Persistence: 1.727 m
+
+Model MAE
+Model:       0.789 m
+Persistence: 0.926 m
+
+Mean station NSE
+Model:       -3.544
+Persistence: -0.664
+
+Median station NSE
+Model:       -0.104
+Persistence: -0.604
+
+RMSE skill vs persistence: 18.7%
+RMSE wins: 30 / 56 stations
+Folds better than persistence: 5 / 5
+
+
+============================================================
+INTERPRETATION AND LIMITATIONS
+============================================================
+
+- PatchTST had the strongest 7-day results in this comparison:
+  lowest pooled RMSE and MAE, highest mean station NSE, and
+  lower station-level RMSE at 41 of 57 stations.
+
+- XGBoost had the lowest pooled RMSE at 30 days, narrowly
+  ahead of LightGBM. Both improved pooled RMSE over persistence,
+  but their mean station NSE values were lower than persistence.
+  Therefore, pooled improvements do not mean every station
+  benefited.
+
+- LightGBM had the lowest pooled RMSE at 90 days, but its mean
+  station NSE was strongly negative. This indicates that the
+  pooled result hides poor performance at some individual wells.
+  Long-horizon forecasts remain unreliable for many stations.
+
+- Seasonal-naive baseline performance was substantially worse
+  than persistence at all three horizons in this evaluation.
+
+- The comparison uses five expanding-window rolling-origin
+  folds and one seed per model/fold. Folds share much of their
+  training history and should not be treated as independent
+  replications.
+
+- These are day-horizon endpoint metrics, not full-horizon
+  average metrics from a single chronological split. Compare
+  values only within the same horizon and sample definition.
+
+- The dataset contains missing observations and long gaps, and
+  station coverage is geographically concentrated. Results do
+  not establish universal performance or deployment readiness.
+
+- Pooled NSE is strongly influenced by between-station variation;
+  interpret it alongside RMSE, mean/median station NSE, and
+  station-level wins/losses.
+
+============================================================
+END OF RESULTS
+============================================================

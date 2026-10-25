@@ -1,0 +1,89 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": 0,
+   "geometry": null,
+   "properties": {
+    "monitoring_location_id": "USGS-0000001",
+    "parameter_code": "72019",
+    "statistic_id": "00003",
+    "begin": "1995-01-01T00:00:00+00:00",
+    "end": "2026-09-01T00:00:00+00:00",
+    "unit_of_measure": "ft",
+    "parameter_name": "Depth to water level, feet below land surface"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 1,
+   "geometry": null,
+   "properties": {
+    "monitoring_location_id": "USGS-0000002",
+    "parameter_code": "72019",
+    "statistic_id": "00003",
+    "begin": "2023-01-01T00:00:00+00:00",
+    "end": "2026-09-01T00:00:00+00:00",
+    "unit_of_measure": "ft",
+    "parameter_name": "Depth to water level, feet below land surface"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 2,
+   "geometry": null,
+   "properties": {
+    "monitoring_location_id": "USGS-0000003",
+    "parameter_code": "72019",
+    "statistic_id": "00003",
+    "begin": "1990-01-01T00:00:00+00:00",
+    "end": "2015-06-01T00:00:00+00:00",
+    "unit_of_measure": "ft",
+    "parameter_name": "Depth to water level, feet below land surface"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 3,
+   "geometry": null,
+   "properties": {
+    "monitoring_location_id": "USGS-0000004",
+    "parameter_code": "72019",
+    "statistic_id": "00003",
+    "begin": "1998-01-01T00:00:00+00:00",
+    "end": "2026-08-01T00:00:00+00:00",
+    "unit_of_measure": "ft",
+    "parameter_name": "Depth to water level, feet below land surface"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 4,
+   "geometry": null,
+   "properties": {
+    "monitoring_location_id": "USGS-0000005",
+    "parameter_code": "62610",
+    "statistic_id": "00003",
+    "begin": "1990-01-01T00:00:00+00:00",
+    "end": "2026-09-01T00:00:00+00:00",
+    "unit_of_measure": "ft",
+    "parameter_name": "Depth to water level, feet below land surface"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 5,
+   "geometry": null,
+   "properties": {
+    "monitoring_location_id": "USGS-0000006",
+    "parameter_code": "72019",
+    "statistic_id": "00003",
+    "begin": "2000-01-01T00:00:00+00:00",
+    "end": "2026-09-01T00:00:00+00:00",
+    "unit_of_measure": "ft",
+    "parameter_name": "Depth to water level, feet below land surface"
+   }
+  }
+ ]
+}

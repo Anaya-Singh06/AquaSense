@@ -1,0 +1,205 @@
+{
+  "title": "AquaSense rolling-origin evaluation summary",
+  "source": "Real USGS groundwater observations + NASA POWER environmental estimates (USGS + NASA POWER (expanded station set))",
+  "evaluation": {
+    "method": "five-fold expanding-window rolling-origin",
+    "scoring": "forecast endpoint at each horizon",
+    "test_period": "the last five rolling-origin test blocks",
+    "seed_policy": "one seed per model/fold",
+    "warning": "folds share training history; not independent replications"
+  },
+  "integration_notes": [
+    "This summary is a reference for the dashboard, not a substitute for the original per-fold experiment outputs.",
+    "Do not fabricate fold-level values or label the summary as live metrics.",
+    "If actual experiment artifacts are present in the project, prefer parsing those files; otherwise use this clearly labelled static evaluation summary.",
+    "Clearly distinguish pooled metrics from station-level metrics.",
+    "Do not claim anomaly detections prove illegal extraction or other causes."
+  ],
+  "data": {
+    "stations_selected": 200,
+    "rows": 1226200,
+    "date_start": "2010-01-01",
+    "date_end": "2026-10-14"
+  },
+  "metrics": {
+    "7d": {
+      "sample_rows": 139030,
+      "stations": 193,
+      "persistence": {
+        "rmse_m": 0.4091,
+        "mae_m": 0.178,
+        "mean_station_nse": 0.8267,
+        "median_station_nse": 0.9317
+      },
+      "models": {
+        "iTransformer": {
+          "rmse_m": 0.375,
+          "mae_m": 0.1608,
+          "mean_station_nse": 0.8097,
+          "median_station_nse": 0.9414,
+          "rmse_skill": 0.0833,
+          "station_wins": 125,
+          "station_total": 192,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "LightGBM": {
+          "rmse_m": 0.3671,
+          "mae_m": 0.1563,
+          "mean_station_nse": 0.7884,
+          "median_station_nse": 0.9424,
+          "rmse_skill": 0.1028,
+          "station_wins": 133,
+          "station_total": 192,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "LSTM": {
+          "rmse_m": 0.4021,
+          "mae_m": 0.1808,
+          "mean_station_nse": 0.5692,
+          "median_station_nse": 0.9285,
+          "rmse_skill": 0.0171,
+          "station_wins": 96,
+          "station_total": 192,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "PatchTST": {
+          "rmse_m": 0.3668,
+          "mae_m": 0.1585,
+          "mean_station_nse": 0.837,
+          "median_station_nse": 0.9424,
+          "rmse_skill": 0.1035,
+          "station_wins": 148,
+          "station_total": 192,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "XGBoost": {
+          "rmse_m": 0.3688,
+          "mae_m": 0.1567,
+          "mean_station_nse": 0.7893,
+          "median_station_nse": 0.9431,
+          "rmse_skill": 0.0986,
+          "station_wins": 132,
+          "station_total": 192,
+          "folds_better": 5,
+          "folds_total": 5
+        }
+      }
+    },
+    "30d": {
+      "sample_rows": 135554,
+      "stations": 192,
+      "persistence": {
+        "rmse_m": 0.8848,
+        "mae_m": 0.459,
+        "mean_station_nse": 0.4357,
+        "median_station_nse": 0.5783
+      },
+      "models": {
+        "iTransformer": {
+          "rmse_m": 0.7947,
+          "mae_m": 0.4055,
+          "mean_station_nse": 0.2941,
+          "median_station_nse": 0.6059,
+          "rmse_skill": 0.1018,
+          "station_wins": 107,
+          "station_total": 192,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "LightGBM": {
+          "rmse_m": 0.7682,
+          "mae_m": 0.3967,
+          "mean_station_nse": -0.1634,
+          "median_station_nse": 0.6209,
+          "rmse_skill": 0.1318,
+          "station_wins": 115,
+          "station_total": 192,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "PatchTST": {
+          "rmse_m": 0.7855,
+          "mae_m": 0.402,
+          "mean_station_nse": 0.4114,
+          "median_station_nse": 0.6332,
+          "rmse_skill": 0.1123,
+          "station_wins": 124,
+          "station_total": 192,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "XGBoost": {
+          "rmse_m": 0.7703,
+          "mae_m": 0.3963,
+          "mean_station_nse": -0.1147,
+          "median_station_nse": 0.6264,
+          "rmse_skill": 0.1294,
+          "station_wins": 118,
+          "station_total": 192,
+          "folds_better": 5,
+          "folds_total": 5
+        }
+      }
+    },
+    "90d": {
+      "sample_rows": 127114,
+      "stations": 191,
+      "persistence": {
+        "rmse_m": 1.6945,
+        "mae_m": 0.9481,
+        "mean_station_nse": -0.8127,
+        "median_station_nse": -0.7965
+      },
+      "models": {
+        "iTransformer": {
+          "rmse_m": 1.5908,
+          "mae_m": 0.8486,
+          "mean_station_nse": -1.8949,
+          "median_station_nse": -0.3315,
+          "rmse_skill": 0.0612,
+          "station_wins": 99,
+          "station_total": 191,
+          "folds_better": 4,
+          "folds_total": 5
+        },
+        "LightGBM": {
+          "rmse_m": 1.3468,
+          "mae_m": 0.7974,
+          "mean_station_nse": -6.3129,
+          "median_station_nse": -0.3137,
+          "rmse_skill": 0.2052,
+          "station_wins": 107,
+          "station_total": 191,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "PatchTST": {
+          "rmse_m": 1.4703,
+          "mae_m": 0.8169,
+          "mean_station_nse": -2.2702,
+          "median_station_nse": -0.2574,
+          "rmse_skill": 0.1323,
+          "station_wins": 105,
+          "station_total": 191,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "XGBoost": {
+          "rmse_m": 1.3581,
+          "mae_m": 0.7969,
+          "mean_station_nse": -6.3718,
+          "median_station_nse": -0.3223,
+          "rmse_skill": 0.1985,
+          "station_wins": 107,
+          "station_total": 191,
+          "folds_better": 5,
+          "folds_total": 5
+        }
+      }
+    }
+  }
+}

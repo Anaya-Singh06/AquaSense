@@ -1,0 +1,205 @@
+{
+  "title": "AquaSense rolling-origin evaluation summary",
+  "source": "Real USGS groundwater observations + NASA POWER environmental estimates",
+  "data": {
+    "stations_selected": 60,
+    "rows": 366660,
+    "date_start": "2010-01-01",
+    "date_end": "2026-09-24"
+  },
+  "evaluation": {
+    "method": "five-fold expanding-window rolling-origin",
+    "scoring": "forecast endpoint at each horizon",
+    "test_period": "April 2024 to September 2026",
+    "seed_policy": "one seed per model/fold",
+    "warning": "folds share training history; not independent replications"
+  },
+  "metrics": {
+    "7d": {
+      "sample_rows": 40586,
+      "stations": 57,
+      "persistence": {
+        "rmse_m": 0.3996,
+        "mae_m": 0.1812,
+        "mean_station_nse": 0.819,
+        "median_station_nse": 0.9357
+      },
+      "models": {
+        "iTransformer": {
+          "rmse_m": 0.3361,
+          "mae_m": 0.161,
+          "mean_station_nse": 0.8227,
+          "median_station_nse": 0.9396,
+          "rmse_skill": 0.1588,
+          "station_wins": 32,
+          "station_total": 57,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "LightGBM": {
+          "rmse_m": 0.3466,
+          "mae_m": 0.1613,
+          "mean_station_nse": 0.8127,
+          "median_station_nse": 0.942,
+          "rmse_skill": 0.1326,
+          "station_wins": 38,
+          "station_total": 57,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "LSTM": {
+          "rmse_m": 0.336,
+          "mae_m": 0.1682,
+          "mean_station_nse": 0.7792,
+          "median_station_nse": 0.9406,
+          "rmse_skill": 0.159,
+          "station_wins": 31,
+          "station_total": 57,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "PatchTST": {
+          "rmse_m": 0.334,
+          "mae_m": 0.1584,
+          "mean_station_nse": 0.8397,
+          "median_station_nse": 0.9484,
+          "rmse_skill": 0.1642,
+          "station_wins": 41,
+          "station_total": 57,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "XGBoost": {
+          "rmse_m": 0.3459,
+          "mae_m": 0.1616,
+          "mean_station_nse": 0.7966,
+          "median_station_nse": 0.9418,
+          "rmse_skill": 0.1342,
+          "station_wins": 39,
+          "station_total": 57,
+          "folds_better": 5,
+          "folds_total": 5
+        }
+      }
+    },
+    "30d": {
+      "sample_rows": 39438,
+      "stations": 57,
+      "persistence": {
+        "rmse_m": 0.9309,
+        "mae_m": 0.4575,
+        "mean_station_nse": 0.4743,
+        "median_station_nse": 0.6394
+      },
+      "models": {
+        "iTransformer": {
+          "rmse_m": 0.8966,
+          "mae_m": 0.4393,
+          "mean_station_nse": 0.3769,
+          "median_station_nse": 0.6311,
+          "rmse_skill": 0.0369,
+          "station_wins": 27,
+          "station_total": 57,
+          "folds_better": 4,
+          "folds_total": 5
+        },
+        "LightGBM": {
+          "rmse_m": 0.8313,
+          "mae_m": 0.4133,
+          "mean_station_nse": 0.1502,
+          "median_station_nse": 0.6847,
+          "rmse_skill": 0.107,
+          "station_wins": 36,
+          "station_total": 57,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "PatchTST": {
+          "rmse_m": 0.8735,
+          "mae_m": 0.4275,
+          "mean_station_nse": 0.4407,
+          "median_station_nse": 0.6992,
+          "rmse_skill": 0.0617,
+          "station_wins": 30,
+          "station_total": 57,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "XGBoost": {
+          "rmse_m": 0.828,
+          "mae_m": 0.4127,
+          "mean_station_nse": 0.156,
+          "median_station_nse": 0.682,
+          "rmse_skill": 0.1105,
+          "station_wins": 36,
+          "station_total": 57,
+          "folds_better": 5,
+          "folds_total": 5
+        }
+      }
+    },
+    "90d": {
+      "sample_rows": 36563,
+      "stations": 56,
+      "persistence": {
+        "rmse_m": 1.7267,
+        "mae_m": 0.926,
+        "mean_station_nse": -0.6641,
+        "median_station_nse": -0.6038
+      },
+      "models": {
+        "iTransformer": {
+          "rmse_m": 1.6687,
+          "mae_m": 0.8639,
+          "mean_station_nse": -0.9424,
+          "median_station_nse": -0.0613,
+          "rmse_skill": 0.0336,
+          "station_wins": 32,
+          "station_total": 56,
+          "folds_better": 4,
+          "folds_total": 5
+        },
+        "LightGBM": {
+          "rmse_m": 1.4045,
+          "mae_m": 0.7888,
+          "mean_station_nse": -3.5445,
+          "median_station_nse": -0.104,
+          "rmse_skill": 0.1866,
+          "station_wins": 30,
+          "station_total": 56,
+          "folds_better": 5,
+          "folds_total": 5
+        },
+        "PatchTST": {
+          "rmse_m": 1.6887,
+          "mae_m": 0.8644,
+          "mean_station_nse": -1.2227,
+          "median_station_nse": -0.0502,
+          "rmse_skill": 0.022,
+          "station_wins": 34,
+          "station_total": 56,
+          "folds_better": 4,
+          "folds_total": 5
+        },
+        "XGBoost": {
+          "rmse_m": 1.4108,
+          "mae_m": 0.7923,
+          "mean_station_nse": -3.5193,
+          "median_station_nse": -0.0673,
+          "rmse_skill": 0.1829,
+          "station_wins": 32,
+          "station_total": 56,
+          "folds_better": 5,
+          "folds_total": 5
+        }
+      }
+    }
+  },
+  "integration_notes": [
+    "This summary is a reference for the dashboard, not a substitute for the original per-fold experiment outputs.",
+    "Do not fabricate fold-level values or label the summary as live metrics.",
+    "If actual experiment artifacts are present in the project, prefer parsing those files; otherwise use this clearly labelled static evaluation summary.",
+    "Clearly distinguish pooled metrics from station-level metrics.",
+    "Do not claim anomaly detections prove illegal extraction or other causes."
+  ]
+}

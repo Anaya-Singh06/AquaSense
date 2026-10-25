@@ -1,0 +1,84 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "id": "USGS-0000001",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -97.25,
+     31.5
+    ]
+   },
+   "properties": {
+    "monitoring_location_id": "USGS-0000001",
+    "monitoring_location_name": "TEST WELL ONE",
+    "site_type_code": "GW",
+    "state_name": "Texas"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "USGS-0000002",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -98.0,
+     30.0
+    ]
+   },
+   "properties": {
+    "monitoring_location_id": "USGS-0000002",
+    "monitoring_location_name": "TEST WELL TWO",
+    "site_type_code": "GW",
+    "state_name": "Texas"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "USGS-0000003",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -99.0,
+     29.0
+    ]
+   },
+   "properties": {
+    "monitoring_location_id": "USGS-0000003",
+    "monitoring_location_name": "TEST WELL THREE",
+    "site_type_code": "GW",
+    "state_name": "Texas"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "USGS-0000004",
+   "geometry": null,
+   "properties": {
+    "monitoring_location_id": "USGS-0000004",
+    "monitoring_location_name": "TEST WELL FOUR",
+    "site_type_code": "GW",
+    "state_name": "Texas"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": "USGS-0000006",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -100.0,
+     32.0
+    ]
+   },
+   "properties": {
+    "monitoring_location_id": "USGS-0000006",
+    "monitoring_location_name": "TEST SPRING SIX",
+    "site_type_code": "SP",
+    "state_name": "Texas"
+   }
+  }
+ ]
+}

@@ -1,0 +1,58 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Secrets — never commit API keys
+.env
+.env.local
+frontend/.env.local
+frontend/.env*.local
+
+# Large downloaded / generated data (kept on disk for local demos)
+data/raw/*.json
+data/processed/
+data/real_data.csv
+data/real_stations.csv
+data/real_data_expanded.csv
+data/real_stations_expanded.csv
+
+# Trained weights (reproduced by the pipeline)
+models/**/*.pt
+models/**/*.joblib
+models/**/*.txt
+models/**/*_meta.json
+models/**/*.json
+
+# Pipeline plots / forecasts / grids
+outputs/**/*.csv
+outputs/**/*.json
+outputs/**/*.png
+outputs/**/*.geojson
+outputs/**/*.txt
+
+# Heavy rolling-origin unit dumps; dashboard uses evaluation_reference/
+experiments/**/units/
+experiments/**/*.csv.gz
+experiments/**/*.csv
+experiments/**/*.json
+experiments/**/*.pt
+experiments/**/*.joblib
+experiments/**/*.png
+experiments/lr1e-4_*/
+*.bak
+
+# Logs and editor junk
+*.log
+Thumbs.db
+Desktop.ini
+.DS_Store
+.idea/
+.vscode/

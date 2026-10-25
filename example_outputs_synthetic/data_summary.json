@@ -1,0 +1,21 @@
+{
+  "source": "synthetic",
+  "source_label": "Synthetic demonstration",
+  "source_badge": "SYNTHETIC DEMO",
+  "station_count": 10,
+  "date_range": [
+    "2022-01-01",
+    "2023-12-31"
+  ],
+  "observation_count": 7041,
+  "calendar_rows": 7300,
+  "missing_fraction": 0.0355,
+  "missing_fraction_by_station": {
+    "median": 0.0349,
+    "max": 0.0507
+  },
+  "imputed_fraction": 0.0353,
+  "has_synthetic_labels": true,
+  "units": "m below ground level (higher = deeper groundwater)",
+  "note": "Simulated stations - only evidence that the pipeline runs."
+}

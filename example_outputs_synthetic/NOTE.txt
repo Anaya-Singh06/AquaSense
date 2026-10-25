@@ -1,0 +1,4 @@
+Produced by `python scripts/run_pipeline.py --source synthetic --skip-lstm` in a BUILD SANDBOX (seed 42).
+ - XGBoost rows are a scikit-learn HistGradientBoosting STAND-IN (xgboost was not installable there; see metrics.json "xgb_backend").
+ - The PyTorch LSTM was NOT run (torch not installable there): no LSTM numbers exist in these files.
+ - SYNTHETIC data only. Nothing here is a real-groundwater result. Regenerate with your own libraries and use YOUR numbers.

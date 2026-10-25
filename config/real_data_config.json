@@ -1,0 +1,50 @@
+{
+  "_comment": "All thresholds below are fixed BEFORE any model is trained and must not be tuned to make stations pass. USGS endpoint/version are configurable because the Water Data APIs are versioned; verify against https://api.waterdata.usgs.gov/docs/ogcapi/ (run scripts/check_usgs_api.py).",
+  "start_date": "2010-01-01",
+  "end_date": "auto",
+  "end_date_lag_days": 10,
+  "usgs": {
+    "base_url": "https://api.waterdata.usgs.gov/ogcapi",
+    "api_version": "v1",
+    "parameter_code": "72019",
+    "statistic_id": "00003",
+    "page_limit": 10000,
+    "timeout_s": 120,
+    "api_key_env": "USGS_API_KEY"
+  },
+  "discovery": {
+    "bbox": [-125.0, 24.0, -66.5, 49.5],
+    "max_candidates": 200,
+    "min_record_years": 6,
+    "must_be_active_since": "2024-01-01",
+    "target_stations": 60,
+    "max_stations": 100
+  },
+  "sufficiency": {
+    "min_years_fail": 3.0,
+    "min_years_warn": 6.0,
+    "min_obs_fail": 730,
+    "max_missing_fraction_fail": 0.50,
+    "max_missing_fraction_warn": 0.25,
+    "max_gap_days_fail": 365,
+    "max_gap_days_warn": 120,
+    "min_seasonal_cycles_warn": 5,
+    "min_test_obs_fail": 60,
+    "min_test_obs_warn": 150,
+    "min_std_m_warn": 0.05,
+    "persistence_trivial_nse_30d": 0.95,
+    "stable_amplitude_m": 0.30,
+    "stable_std_30d_change_m": 0.10
+  },
+  "nasa_power": {
+    "url": "https://power.larc.nasa.gov/api/temporal/daily/point",
+    "community": "AG",
+    "chunk_years": 10,
+    "parameters": {
+      "PRECTOTCORR": "rainfall_mm",
+      "T2M": "temperature_c",
+      "EVLAND": "evapotranspiration_mm",
+      "GWETROOT": "soil_moisture"
+    }
+  }
+}
